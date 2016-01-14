@@ -71,6 +71,27 @@
 
 
 			<div id="content-container">
+				<h1>Venue info</h1>
+
+				<table width="100%" border="1">
+					<thead>
+						<tr>
+<% for(var x = 0; x < apiData.dataset.columnNames.length; x++) {%>
+							<th><%= apiData.dataset.columnNames[x] %></th>
+<% } %>
+						</tr>
+					</thead>
+					<tbody>
+<% for(var y = 0; y < apiData.dataset.data.length; y++) {%>
+						<tr>
+	<% for(var z = 0; z < apiData.dataset.columnNames.length; z++) {%>
+							<td><%= apiData.dataset.data[y][z] %></td>
+	<% } %>
+						</tr>
+<% } %>
+					</tbody>
+				</table>
+
 
 
 			</div>
